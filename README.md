@@ -6,3 +6,6 @@ This is a repository where we show javascripts skills creating a client and api
 * ng g c header
 * npm install --save @angular/material @angular/cdk
 
+# Commands used in loobback
+
+$ npm install loopback-connector-rest --save

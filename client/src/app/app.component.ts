@@ -3,6 +3,8 @@ import { JsonplaceholderService } from './service/jsonplaceholder.service';
 import { Photo } from './model/Photo';
 import { Comment } from './model/Comment';
 import { Post } from './model/Post';
+import { User } from './model/User';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +17,7 @@ export class AppComponent {
   photos: Photo[] = [];
   comments: Comment[] = [];
   posts: Post[] = [];
+  users: User[] = [];
 
 
   constructor(public service: JsonplaceholderService) { }
@@ -28,13 +31,13 @@ export class AppComponent {
     //     } 
     //   )
 
-      this.service.getComments()
-      .subscribe(
-        comments => {
-          console.log(comments);
-          this.comments = comments;
-        } 
-      )
+      //  this.service.getComments()
+      //  .subscribe(
+      //   comments => {
+      //      console.log(comments);
+      //     this.comments = comments;
+      //    } 
+      //  )
 
       // this.service.getPosts()
       // .subscribe(
@@ -43,6 +46,14 @@ export class AppComponent {
       //     this.posts = posts;
       //   } 
       // )
+
+      this.service.getUsers()
+       .subscribe(
+          users => {
+            console.log(users);
+            this.users = users;
+          } 
+        ) 
   }
 
   something() { alert('Works!'); }

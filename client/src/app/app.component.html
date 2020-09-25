@@ -16,12 +16,12 @@
   </mat-card-actions>
 </mat-card> -->
 
-<mat-card *ngFor="let comment of comments">
+<mat-card *ngFor="let user of users">
   <mat-card-subtitle>
-    {{comment.name}}
+    {{user.username}}
   </mat-card-subtitle>
   <mat-card-content>
-    <p>Album Id: {{comment.postId}}</p>
+    <p>Usario Id: {{user.id}}</p>
   </mat-card-content>
   <mat-card-actions>
 
